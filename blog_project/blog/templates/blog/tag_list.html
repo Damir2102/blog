@@ -1,0 +1,15 @@
+{% extends "blog/index.html" %}
+{% block title %}
+Tags
+{% endblock %}
+{% block content %}
+<h1>Tags</h1>
+
+<ul class="list-group">
+  {% for tag in tag_list %}
+  <li class="list-group-item"><a href="{% url 'tag_detail_url' pk=tag.pk %}">{{tag.title}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+<!-- #На страницу с тегами должны передаваться теги из базы данных (Maker, Shooter и т.д) -->

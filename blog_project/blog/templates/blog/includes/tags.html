@@ -1,0 +1,5 @@
+<ul class="list-group">
+    {% for tag in post.tags.all %}
+    <li class="list-group-item"><a href="{% url 'tag_detail_url' pk=tag.pk %}">{{ tag.title }}</a></li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,23 @@
+{% extends "blog/index.html" %}
+{% block title %}
+{{post.title}}
+{% endblock %}
+{% block content %}
+<article>
+  <div class="card mb-3">
+    <h3 class="card-title">{{post.title}}</h3>
+    {% include "blog/includes/post_img.html" %}
+
+    <div class="card-body">
+      <p class="card-text">{{post.body}}</p>
+      <p class="card-text"><small class="text-muted">{{post.time_update}}</small></p>
+      {% include "blog/includes/tags.html" %}
+    </div>
+  </div>
+</article>
+{% endblock %}
+
+
+
+
+
